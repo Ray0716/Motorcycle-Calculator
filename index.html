@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Motorcycle Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="https://ghostelectric.web.illinois.edu/" target="_blank" rel="noopener noreferrer" aria-label="Ghost Electric Motorcycles website">
+    <img class="logo" src="ghost_logo.svg" alt="Team logo">
+  </a>
+  <div style="flex:1; ">
+    <h1>Electric Motorcycle Calculator</h1>
+    <p>Enter your values, then press Calculate. Defaults are the values from the team spreadsheet.</p>
+    <p class="credit" style="text-align:right; margin-left:auto; width:100%;">Developed by <a href="https://rayt.pages.dev" target="_blank" rel="noopener noreferrer" style="color:#8ecae6;">Ray Tang</a> · Ghost Electric Motorcycles · 2026</p>
+  </div>
+</header>
+<main>
+  <section>
+    <h2>Inputs</h2>
+    <div id="inputs"></div>
+    <button id="calc" type="button">Calculate</button>
+    <h3 style="margin-top:20px">Saved versions</h3>
+    <div class="save">
+      <input id="vname" type="text" placeholder="Version name (e.g. Heavier battery)" aria-label="Version name">
+      <button id="vsave" type="button">Save current inputs</button>
+    </div>
+    <div id="versions"></div>
+    <div class="ie">
+      <button id="vexp" class="alt" type="button">Export versions</button>
+      <button id="vimp" class="alt" type="button">Import versions</button>
+      <input id="vfile" type="file" accept=".json,application/json" hidden>
+    </div>
+    <p id="vmsg" class="hint"></p>
+    <p class="hint">Check "Compare" on a version to see it next to your current results. Versions are stored in this browser.</p>
+  </section>
+  <div id="splitter" role="separator" aria-orientation="vertical" aria-label="Resize columns" aria-valuemin="20" aria-valuemax="80" aria-valuenow="50" tabindex="0" title="Drag to resize (double-click to reset)"></div>
+  <section>
+    <div class="rh"><h2>Results</h2><div class="seg"><button id="mTable" class="on" type="button">Table</button><button id="mDiag" type="button">Diagram</button></div></div>
+    <div id="results"><p class="msg">Press Calculate to see results.</p></div>
+
+    
+  </section>
+  <!-- <p style="font-size: 1.2em; color: gray;">Programmed by Ray Tang; Ghost Electric Motorcycles 2026</p> -->
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
